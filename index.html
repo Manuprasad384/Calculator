@@ -79,13 +79,13 @@ input[type=submit]:hover {
 </section>
 
 <script>
-  $('#forms').submit((e)=>{
+  $('#gform').submit((e)=>{
     e.preventDefault()
     $.ajax({
-      url:'https://script.google.com/macros/s/AKfycbz9NDWcBZGV-hpN4EWVgLe3HC8XW0InNV4MdruRdVDTfc8282hv5kIudW2p_7pu9FAk7A/exec',
+      url:'https://docs.google.com/spreadsheets/d/19eB09Pt5ap7PR77s1prr2ZRGQ8_y6XXp0vZjlKlp4tA/edit?usp=sharing',
       method:'post',
 
-      data:$('#forms').serialize(),
+      data:$('#gform').serialize(),
       success:(res)=>{
         alert('data submitted successfully')
         window.location.reload()
