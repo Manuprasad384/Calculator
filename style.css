@@ -1,0 +1,29 @@
+section{
+    padding:5px;
+    background-color:black;
+    border-radius:20px;
+    height:98%;
+}
+
+#div1{
+    margin-top:15%;
+    margin-left:5%;
+    width:87%;
+    height:15%;
+    border-radius:15px;
+    border:solid black 2px;
+    text-align:right;
+    font-size:40px;
+    background: gray;
+    padding:5px;
+    border:solid white 2px;
+    overflow:hidden;
+}
+
+#div2{
+    margin-left:8%;
+    margin-top:20%;
+    
+    width:85%;
+}
+

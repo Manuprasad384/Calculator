@@ -1,0 +1,270 @@
+<html>
+    <head>
+        <title></title>
+    <link rel="stylesheet" href="style.css">
+    
+    </head>
+    
+    <body>
+        <script> src="main.js"</script>
+    <section>
+        <div id="div1">
+            
+        </div>
+        
+        <div id="div2"></div>
+            
+           
+        
+    </section>    
+    </body>
+    <script>
+        var a,y,b,c,pm,befor,after,p;
+        
+          for (let i=0;i< 20;i++){
+var x=document.createElement("button");
+   
+   document.getElementById("div2").appendChild(x);
+    x.style.color="red";
+    x.style.width="70px";
+    x.style.height="70px";
+    x.style.margin="5px";
+    x.id="but"+i;
+   x.style.borderRadius="10px";
+   x.style.border="0px";
+   x.style.fontSize="25px";
+   }
+   
+   
+    
+    
+    
+    document.getElementById("but0").innerHTML="AC";
+    document.getElementById("but0").onclick=function(){
+      document.getElementById("div1").innerHTML="";
+      a=null; b=null;c=null; pm=null;after=null;befor=null;p=null;
+  }  
+    
+    document.getElementById("but1").innerHTML="()";
+    document.getElementById("but2").innerHTML="%";
+    
+    
+    document.getElementById("but3").innerHTML="÷";
+    document.getElementById("but3").onclick=function(){
+        y=document.getElementById("div1").innerHTML;
+        if(a !=null)
+      {document.getElementById("div1").innerHTML=y+"÷";}
+    after=null;
+    befor=y+"÷";
+    if(b == null){b=parseFloat(a);a=null;}
+    else if( c == "4"){b=b+parseFloat(a);a=null;}
+    else if( c == "3"){b=b-parseFloat(a);a=null;}
+    else if( c == "2"){b=b*parseFloat(a);a=null;d}
+    else{b=b/parseFloat(a);a=null;}
+    c="1";
+    
+    
+    }
+    
+    
+    document.getElementById("but4").innerHTML="7";
+    document.getElementById("but4").onclick=function(){
+    
+        y=document.getElementById("div1").innerHTML;
+    document.getElementById("div1").innerHTML=y+"7";
+    if(a == null){a="7"}else{a=a+"7"}
+    if(after == null){after="7"}else{after=after+"7"}
+    }
+    
+    
+    document.getElementById("but5").innerHTML="8";
+    document.getElementById("but5").onclick=function(){
+    
+        y=document.getElementById("div1").innerHTML;
+    document.getElementById("div1").innerHTML=y+"8";
+    if(a == null){a="8"}else{a=a+"8"}
+    if(after == null){after="8"}else{after=after+"8"}
+    }
+    
+    
+    document.getElementById("but6").innerHTML="9";
+    document.getElementById("but6").onclick=function(){
+    
+        y=document.getElementById("div1").innerHTML;
+    document.getElementById("div1").innerHTML=y+"9";
+    if(a == null){a="9"}else{a=a+"9"}
+    if(after == null){after="9"}else{after=after+"9"}
+    }
+    
+    
+    document.getElementById("but7").innerHTML="×";
+    document.getElementById("but7").onclick=function(){
+        y=document.getElementById("div1").innerHTML;
+        
+    if(a !=null)
+      {document.getElementById("div1").innerHTML=y+"×";}
+    after=null;
+    befor=y+"×";
+    if(b == null && a!= null) {b=parseFloat(a);a=null;c="2"}
+    else if( c == "4"){b=b+parseFloat(a);a=null;c="2"}
+    else if( c == "3"){b=b-parseFloat(a);a=null;c="2"}
+    else if( c == "1"){b=b/parseFloat(a);a=null;c="2"}
+    else{b=b*parseFloat(a);a=null;c="2"}
+    
+    
+    
+    }
+    
+    
+    document.getElementById("but8").innerHTML="4";
+    document.getElementById("but8").onclick=function(){
+    
+        y=document.getElementById("div1").innerHTML;
+    document.getElementById("div1").innerHTML=y+"4";
+    if(a == null){a="4"}else{a=a+"4"}
+    if(after == null){after="4"}else{after=after+"4"}
+    }
+    
+    
+    document.getElementById("but9").innerHTML="5";
+    document.getElementById("but9").onclick=function(){
+    
+        y=document.getElementById("div1").innerHTML;
+    document.getElementById("div1").innerHTML=y+"5";
+    if(a == null){a="5"}else{a=a+"5"}
+    if(after == null){after="5"}else{after=after+"5"}
+    }
+    
+    
+    document.getElementById("but10").innerHTML="6";
+    document.getElementById("but10").onclick=function(){
+    
+        y=document.getElementById("div1").innerHTML;
+    document.getElementById("div1").innerHTML=y+"6";
+    if(a == null){a="6"}else{a=a+"6"}
+    if(after == null){after="6"}else{after=after+"6"}
+    }
+    
+    
+    document.getElementById("but11").innerHTML="-";    
+    document.getElementById("but11").onclick=function(){
+        y=document.getElementById("div1").innerHTML;
+        if(a !=null)
+      {document.getElementById("div1").innerHTML=y+"-";}
+    after=null;
+    befor=y+"-";
+    if(b == null){b=parseFloat(a);a=null;}
+    else if( c == "4"){b=b+parseFloat(a);a=null;}
+    else if( c == "2"){b=b*parseFloat(a);a=null;}
+    else if( c == "1"){b=b/parseFloat(a);a=null;}
+    else{b=b-parseFloat(a);a=null;}
+    c="3";
+    }
+     
+    
+    
+    
+    document.getElementById("but12").innerHTML="1";
+    document.getElementById("but12").onclick=function(){
+    
+        y=document.getElementById("div1").innerHTML;
+    document.getElementById("div1").innerHTML=y+"1";
+    if(a == null){a="1"}else{a=a+"1"}
+    if(after == null){after="1"}else{after=after+"1"}
+    }
+    
+    
+    document.getElementById("but13").innerHTML="2";
+    document.getElementById("but13").onclick=function(){
+    
+        y=document.getElementById("div1").innerHTML;
+    document.getElementById("div1").innerHTML=y+"2";
+    if(a == null){a="2"}else{a=a+"2"}
+    if(after == null){after="2"}else{after=after+"2"}
+    }
+    
+    
+    
+    document.getElementById("but14").innerHTML="3";
+    document.getElementById("but14").onclick=function(){
+    
+        y=document.getElementById("div1").innerHTML;
+    document.getElementById("div1").innerHTML=y+"3";
+    if(a == null){a="3"}else{a=a+"3"}
+    if(after == null){after="3"}else{after=after+"3"}
+    }
+    
+    
+    document.getElementById("but15").innerHTML="+";
+    document.getElementById("but15").onclick=function(){
+        var y=document.getElementById("div1").innerHTML;
+        if(a !=null)
+      {document.getElementById("div1").innerHTML=y+"+";}
+        after=null;
+        befor=y+"+";
+        if(b == null)
+    {b=parseFloat(a);a=null;}
+    else if( c == "3"){b=b-parseFloat(a);a=null;}
+    else if( c == "2"){b=b*parseFloat(a);a=null;}
+    else if( c == "1"){b=b/parseFloat(a);a=null;}
+    else {b=b+parseFloat(a);a=null;}
+     c="4";
+    }
+    
+    
+    document.getElementById("but16").innerHTML="+/-";
+    document.getElementById("but16").onclick=function(){
+    
+        y=document.getElementById("div1").innerHTML;
+        if(pm ==null && c == null)
+    {document.getElementById("div1").innerHTML="-"+y;
+    a="-"+a;pm="1"}else if(pm !=null && c == null){document.getElementById("div1").innerHTML=y.substring(1);a=a.substring(1);pm=null;}
+    else if(pm ==null && c!=null && after!=null){
+  document.getElementById("div1").innerHTML=befor+"(-"+after;pm="1";p=a;a="-"+a;}
+    else if(pm !=null && c!=null){
+  document.getElementById("div1").innerHTML=befor+after;
+  pm=null;a=p;}
+    }
+    
+    
+    document.getElementById("but17").innerHTML="0";
+    document.getElementById("but17").onclick=function(){
+        y=document.getElementById("div1").innerHTML;
+    document.getElementById("div1").innerHTML=y+"0";
+    if(a == null){a="0"}else{a=a+"0"}
+    if(after == null){after="0"}else{after=after+"0"}
+    }
+    
+    
+    document.getElementById("but18").innerHTML=".";
+    document.getElementById("but18").onclick=function(){
+        y=document.getElementById("div1").innerHTML;
+    document.getElementById("div1").innerHTML=y+".";
+    a=a+".";
+    }
+    
+    
+    document.getElementById("but19").innerHTML="=";
+    document.getElementById("but19").onclick=function(){
+    if(c == "4"){
+    b=b+parseFloat(a);}
+    else if(c == "3")
+    { b=b-parseFloat(a);}
+    else if(c == "2")
+    { b=b*parseFloat(a);} 
+    else if(c == "1")
+    { b=b/parseFloat(a);}
+    if(b !=null)
+ {document.getElementById("div1").innerHTML=b.toString();
+  a=b.toString();}
+ b=null;c=null;pm=null;after=null;befor=null;p=null;
+    }
+    
+    </script>
+    
+    
+        
+        
+    
+    
+</html>
