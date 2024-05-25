@@ -1,5 +1,5 @@
 
-var a,y,b,c,pm,befor,after,p,m,br,be,t,te;
+var a,y,b,c,pm,befor,after,p,m,br,be,t,te,br1,brc,pn,bh,br2;
 
 function number(n){
 
@@ -7,6 +7,7 @@ function number(n){
     document.getElementById("result").innerHTML=y+n;
     if(a == null){a=n;t=n;}else{a=a+n;t=t+n;}
     if(after == null){after=n}else{after=after+n}
+    bh=1;
 }
 
 
@@ -27,7 +28,7 @@ if(be!=null){b=null;}
     else if( c == "3"){b=b-parseFloat(a);a=null;}
     else if( c == "2"){b=b*parseFloat(a);a=null;}
     else{b=b/parseFloat(a);a=null;}
-    c=x;
+    c=x;pn=0;bh=0;
     
 }
 
@@ -55,7 +56,7 @@ if(be != null){
   a=b.toString();}
  
 
- b=null;c=null;pm=null;after=null;befor=null;p=null;be=null;br=null;
+ b=null;c=null;pm=null;after=null;befor=null;p=null;be=null;br=null;pn=0;br1=null;br2=null;
  
  if(te!=null){b=parseFloat(a);a=null;c=te;}
  
@@ -66,7 +67,7 @@ function cl(){
     
     document.getElementById("result").innerHTML="";
       a=null; b=null;c=null; pm=null;after=null;befor=null;p=null;be=null;br=null;
-      t=null;te=null;
+      t=null;te=null;pn=0;br1=null;br2=null;
 }
 
 
@@ -85,9 +86,22 @@ function pom(){
 
 
 function pnt(){
+if(pn == 1){
+    
+    y=document.getElementById("result").innerHTML;
+    document.getElementById("result").innerHTML=y+"";
+}else{
+
+if(a==null){
+    y=document.getElementById("result").innerHTML;
+    document.getElementById("result").innerHTML=y+"0.";
+    a="0.";pn=1;
+    
+}else{
+
     y=document.getElementById("result").innerHTML;
     document.getElementById("result").innerHTML=y+".";
-    a=a+".";
+    a=a+".";pn=1;}}
 }
 
 
@@ -95,25 +109,59 @@ function bracket(){
     if(br == null){
         y=document.getElementById("result").innerHTML;
     document.getElementById("result").innerHTML=y+"(";
-        br=1;be=null;
+        
+        if(bh == 1){brhelpr();
+        
+        br=1;be=null;b=null;a=null;
+        }
+        
+        else{
+            
+            br=1;be=null;br1=b;b=null;brc=c;
+        }
+        
+        
     }
     else{
         y=document.getElementById("result").innerHTML;
     document.getElementById("result").innerHTML=y+")";
     br=null;
     
+        
+    if(br2!=null){
+        if(c == "4"){b=b+parseFloat(a);b=b*br2}
+    else if(c == "3") { b=b-parseFloat(a);b=b*br2;}
+    else if(c == "2"){ b=b*parseFloat(a)*br2} 
+    else if(c == "1"){ b=b/parseFloat(a)*br2;}
+    
+    c=null;br2=null;
+        
+    }
+    
+    
+    
     if(c == "4"){b=b+parseFloat(a);}
     else if(c == "3") { b=b-parseFloat(a);}
-    else if(c == "2"){ b=b*parseFloat(a);} 
+    else if(c == "2"){ b=b*parseFloat(a)} 
     else if(c == "1"){ b=b/parseFloat(a);}
+    
+    if(brc == "4"){b=b+br1;}
+    else if(brc == "3") { b=br1-b;}
+    else if(brc == "2"){ b=b*br1;} 
+    else if(brc == "1"){ b=b/br1;}
+    
     
     if(b !=null)
     
  { if(b!= Math.floor(b)){b=b.toFixed(5)}
  
+ 
+ 
   a=b.toString();}
   be=1;c=null;
     }
+    
+    
 }
 
 
@@ -153,4 +201,21 @@ if(b!= Math.floor(b)){b=b.toFixed(2)}
  
  b=null;c=null;pm=null;after=null;befor=null;p=null;be=null;br=null;
     
+}
+
+
+function brhelpr(){
+        
+
+        
+    if(c == "4"){br2=b+parseFloat(a);}
+    else if(c == "3") { br2=b-parseFloat(a);}
+    else if(c == "2"){ br2=b*parseFloat(a);} 
+    else if(c == "1") { br2=b/parseFloat(a);}
+    
+    
+    
+ bh=0;
+
+ 
 }
