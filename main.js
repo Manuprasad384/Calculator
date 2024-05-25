@@ -1,5 +1,5 @@
 
-var a,y,b,c,pm,befor,after,p,m,br,be,t,te;
+var a,y,b,c,pm,befor,after,p,m,br,be,t,te,br1,brc;
 
 function number(n){
 
@@ -95,7 +95,7 @@ function bracket(){
     if(br == null){
         y=document.getElementById("result").innerHTML;
     document.getElementById("result").innerHTML=y+"(";
-        br=1;be=null;
+        br=1;be=null;br1=b;b=null;brc=c;
     }
     else{
         y=document.getElementById("result").innerHTML;
@@ -106,7 +106,13 @@ function bracket(){
     else if(c == "3") { b=b-parseFloat(a);}
     else if(c == "2"){ b=b*parseFloat(a);} 
     else if(c == "1"){ b=b/parseFloat(a);}
-    
+
+
+        if(brc == "4"){b=b+br1;}
+    else if(brc == "3") { b=br1-b;}
+    else if(brc == "2"){ b=b*br1;} 
+    else if(brc == "1"){ b=b/br1;}
+        
     if(b !=null)
     
  { if(b!= Math.floor(b)){b=b.toFixed(5)}
